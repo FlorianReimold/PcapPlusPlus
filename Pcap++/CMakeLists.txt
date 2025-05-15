@@ -99,9 +99,7 @@ target_link_libraries(
     Threads::Threads
 )
 
-if(LIGHT_PCAPNG_ZSTD)
-  target_link_libraries(Pcap++ PRIVATE light_pcapng)
-endif()
+target_link_libraries(Pcap++ PRIVATE light_pcapng)
 
 if(PCAPPP_INSTALL)
   install(
